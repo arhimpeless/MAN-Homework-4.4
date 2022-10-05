@@ -8,7 +8,7 @@
             int m;
             Random rnd = new Random();
             //while (Console.ReadKey! = ConsoleKey.Escape)
-            while(true)
+            while (true)
             {
                 Console.WriteLine("Существует камера хранения с количеством ячеек N. ");
                 Console.Write("Введите N: ");
@@ -24,20 +24,11 @@
                 Console.Write("Нужно изъять вещи из каждой M кратной ячейки.\nВведите М: ");
                 m = int.Parse(Console.ReadLine());
                 int extract = 0;
-                //foreach (int value in cellArray)
-                //{
-                //    if (value % m == 0)
-                //    {
-                //        int x = value;
-                //        cellArray[x] = 0;
-                //    }
-                //}
-                for (int x = 1; x < cellArray.Length; x++)
+                for (int x = 1; x <= cellArray.Length; x++)
                 {
-                    
-                    if (x %(m-1) == 0)
-                     {
-                        cellArray[x] = 0;
+                    if (x % m == 0)
+                    {
+                        cellArray[x - 1] = 0;
                     }
                 }
                 Console.WriteLine("Оставшаяся масса: " + cellArray.Sum());
