@@ -23,7 +23,7 @@
                 Console.WriteLine("Общая масса: " + cellArray.Sum() + "\n");
                 Console.Write("Нужно изъять вещи из каждой M кратной ячейки.\nВведите М: ");
                 m = int.Parse(Console.ReadLine());
-                int extract = 0;
+  
                 for (int x = 1; x <= cellArray.Length; x++)
                 {
                     if (x % m == 0)
